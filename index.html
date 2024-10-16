@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let celsius = 25;
+        let fahrenheit = (9 / 5 * 25) + 32;
+        console.log('Температура в градусах Цельсия:', celsius);
+        console.log('Температура в градусах Фаренгейта:', fahrenheit);
+       
+        let name = 'Danil';
+        let admin = name;
+        console.log('Значение переменной admin:', admin);
+
+        // Задача3. Описание задачи:
+        // 1. Создайте переменные num1 и num2, значения которых пользователь вводит с
+        // клавиатуры.
+        // 2. Проверьте, что переменная num1 меньше или равна 1, а переменная num2
+        // больше или равна 3.
+
+        let num1 = parseFloat(prompt('Введите первое число: '));
+        let num2 = parseFloat(prompt('Введите второе число: '));
+        if(num1 <= 1 && num2 >= 3) {
+            console.log('Условия выполнены');
+        } else {
+            console.log('Условия не выполнены');
+        }
+
+        // Задача 4.Описание задачи: Перепишите следующий код с использованием тернарного
+        // оператора:
+        // let test = true;
+        // if (test === true) {
+        // console.log('+++');
+        // } else {
+        // console.log('---');
+        // }
+        let test = true;
+        console.log(test ? '+++' : '---');
+
+        // Задача 5. Описание задачи: В переменной day хранится число от 1 до 31. Определите, в какую
+        // декаду месяца попадает это число (первая, вторая или третья декада).
+
+        let day = 5;
+        let decade;
+        if (day >= 1 && day <= 10) {
+        decade = 'первая';
+        } else if (day > 10 && day <= 20) {
+        decade = 'вторая';
+        } else if (day > 20 && day <= 31) {
+        decade = 'третья';
+        } else {
+        decade = 'некорректное число';
+        }
+        // Вывод результата
+        console.log(`Число ${day} попадает в ${decade} декаду месяца.`);
+
+        // Задание 6.Описание задачи: 1. Получите от пользователя число. 2. Выведите разряды числа: количество сотен, десятков и единиц
+        
+        // Получение числа от пользователя
+        let number = parseInt(prompt('Введите число:'));
+        // Извлечение разрядов
+        let units = number % 10;
+        let tens = Math.floor((number % 100) / 10);
+        let hundreds = Math.floor(number / 100);
+
+        // Вывод
+        console.log(`В числе ${number} количество сотен ${units}, десятков ${tens}, сотен ${hundreds}`);
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
